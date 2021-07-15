@@ -31,8 +31,8 @@ rvm --version
 echo versiones de ruby 
 # rvm list known
 echo instalando Ruby
-rvm install 3.0.2
-rvm use 3.0.2 --default
+rvm install 3.0.0
+rvm use 3.0.0 --default
 # instalar Bundler y Rails
 echo instalando Bundler and Rails
 gem install bundler --no-document

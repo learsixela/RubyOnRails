@@ -18,6 +18,7 @@ class CodingDojo
 end 
 # Ahora use la clase anterior para crear objetosnow using above class to create objects 
 branch = CodingDojo.new(253, "SF CodingDojo", "Sunnyvale CA") 
+puts 
 branch.display_all 
 branch2 = CodingDojo.new(155, "Boston CodingDojo", "Boston MA") 
 branch2.display_all
