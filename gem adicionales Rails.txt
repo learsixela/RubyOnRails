@@ -1,0 +1,8 @@
+sudo apt install g++
+sudo apt install build-essentia
+gem install sassc
+sudo apt-get install libsqlite3-dev
+gem install sqlite3 -v '1.4.2'
+gem install sass-rails
+cd bin/
+rails g scaffold Cliente name:string

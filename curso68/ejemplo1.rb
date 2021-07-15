@@ -37,8 +37,8 @@ if !(age < 21)
 i = 0
 num = 5
 while i < num do
-   puts "Dentro del bucle i = #{i}"
-   i +=1
+  puts "Dentro del bucle i = #{i}"
+  i +=1
 end
 
 # [0,1,2,3,4,5]
