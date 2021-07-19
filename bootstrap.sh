@@ -3,9 +3,10 @@
 echo mejorar y actualizar el sistema
 sudo apt-get update
 sudo apt-get -y upgrade
-sudo apt install g++
+sudo apt install g++ -y
 sudo apt install build-essential
-sudo apt-get install git-core curl zlib1g-dev libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev  libffi-dev
+sudo apt-get install git-core curl zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev libcurl4-openssl-dev  libffi-dev
+sudo apt-get install libsqlite3-dev
 # instalar node.js para ejecutar comandos js al utilizar Rails
 echo instalando node.js para ejecutar JS y Git
 sudo apt-get install -y nodejs
@@ -42,7 +43,7 @@ gem install rails -v 6.1.4 --no-document
 # instalar postgres y sus dependencais
 #echo instalando psql y sus dependencias
 #sudo apt-get install -y postgresql postgresql-contrib libpq-dev
-
+gem install sqlite3 -v '1.4.2'
 echo version instalada
 ruby -v
 rails -v

@@ -5,9 +5,6 @@ gem install sassc
 sudo apt-get install libsqlite3-dev
 gem install sqlite3 -v '1.4.2'
 
-cd bin/
-rails g scaffold Cliente name:string
-
 ****Actualizar Node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
@@ -19,5 +16,19 @@ nvm install 14.0.0
 npm install --global yarn
 bundle install
 
-rails webpacker:install
+rails g scaffold Cliente name:string apellido:string edad:integer email:string contrasena:string
 
+
+
+rails webpacker:install
+rails webpacker:compile
+yarn install
+bundle exec rails webpacker:install
+
+#yarn remove @rails/webpacker
+yarn add @rails/webpacker@^5.4.0
+#rm -rf ./node_modules
+
+### eliminar linea 10 de application.html.erb
+### cambia en config/webpacker.yml a false, linea 52  
+compile: false
