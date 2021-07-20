@@ -32,3 +32,6 @@ yarn add @rails/webpacker@^5.4.0
 ### eliminar linea 10 de application.html.erb
 ### cambia en config/webpacker.yml a false, linea 52  
 compile: false
+
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
