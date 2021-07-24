@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @mensaje.content %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <% @usuarios.each do |usuario| %>
+    <% if usuario.id == @mensaje.usuario_id %>
+      <%= usuario.nombre %>
+    <% end %>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_mensaje_path(@mensaje) %> |
+<%= link_to 'Back', mensajes_path %>

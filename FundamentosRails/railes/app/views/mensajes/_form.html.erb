@@ -1,0 +1,27 @@
+<%= form_with(model: mensaje) do |form| %>
+  <% if mensaje.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mensaje.errors.count, "error") %> prohibited this mensaje from being saved:</h2>
+
+      <ul>
+        <% mensaje.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :usuario_id %>
+    <%= collection_select(:mensaje, :usuario_id, Usuario.all, :id, :nombre, prompt: true) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

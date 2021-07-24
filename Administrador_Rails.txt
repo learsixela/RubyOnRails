@@ -1,0 +1,28 @@
+********************
+rails g model Autor nombre:string apellido:string
+********************
+rails g model Libro titulo:string descripcion:string autor:references
+********************
+has_many :libros, dependent: :destroy
+
+********************
+rails db:migrate
+********
+bundle add activeadmin
+********************
+bundle add devise
+********************
+rails generate active_admin:install
+********
+rails db:migrate db:seed
+********************
+admin@example.com
+password
+
+********************
+rails g active_admin:resource Libro
+rails g active_admin:resource Autor
+
+********************
+
+

@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Usuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Email</th>
+      <th>Rut</th>
+      <th>Rol</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usuarios.each do |usuario| %>
+      <tr>
+        <td><%= usuario.nombre %></td>
+        <td><%= usuario.apellido %></td>
+        <td><%= usuario.edad %></td>
+        <td><%= usuario.email %></td>
+        <td><%= usuario.rut %>-<%= usuario.dv %></td>
+        <td>  
+            <% @rols.each do |rol| %>
+                <% if rol.id == usuario.rol_id %>
+                    <%= rol.nombre %>
+                <% end %>
+            <% end %> 
+        </td>
+        <td><%= link_to 'Mostrar', usuario %></td>
+        <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+        <td><%= link_to 'Eliminar', usuario, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rols.each do |rol| %>
+      <tr>
+        <td><%= rol.nombre %></td>
+        <td><%= link_to 'Motrar', rol %></td>
+        <td><%= link_to 'Editar', edit_rol_path(rol) %></td>
+        <td><%= link_to 'Eliminar', rol, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<div class="field">
+  <label for="rol_rol_id">Rol</label>
+  <%= collection_select :rol, :rol_id, Rol.all, :id, :nombre, :prompt => true %>
+</div>
+
+<br>
+<%= link_to 'Nuevo Usuario', new_usuario_path %>

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mensajes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Usuario</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mensajes.each do |mensaje| %>
+      <tr>
+        <td><%= mensaje.content %></td>
+        <td>
+        <% @usuarios.each do |usuario| %>
+          <% if usuario.id == mensaje.usuario_id %>
+            <%= usuario.nombre %>
+          <% end %>
+        <% end %>
+        
+        </td>
+        <td><%= link_to 'Show', mensaje %></td>
+        <td><%= link_to 'Edit', edit_mensaje_path(mensaje) %></td>
+        <td><%= link_to 'Destroy', mensaje, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mensaje', new_mensaje_path %>
