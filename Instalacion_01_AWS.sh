@@ -38,8 +38,10 @@ gem install sqlite3 -v '1.4.2'
 gem install sass-rails
 gem install sassc
 gem install passenger
-#si falla passenger continuar con archivo instalacion_AWS_adicionales.sh
+#si falla passenger continuar con archivo instalacion_02_AWS_adicionales.sh
 
 #verificar versiones 
 ruby -v
 rails -v
+
+#continuar con Instalacion_03_Passenger.sh
