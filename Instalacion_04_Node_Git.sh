@@ -15,7 +15,7 @@ bundle install
 #crear archivo log
 sudo touch log/development.log
 #Cambiar permisos de archivo log
-sudo chmod 0666 /log/development.log
+sudo chmod 0666 log/development.log
 
 #Crear basedatos sqlite3
 rails db:drop

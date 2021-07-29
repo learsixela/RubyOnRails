@@ -8,7 +8,7 @@ sudo swapon /swap
 rvmsudo passenger-install-nginx-module
 
 #Presionamos enter
-#presionamos shift+1 (!) y seleccionamos
+#presionamos shift+1 (!) y seleccionamos con barra espaciadora
     #(*)ruby  
     #(*) Node.Js
 #Presionamos enter
