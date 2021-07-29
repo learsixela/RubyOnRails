@@ -14,4 +14,7 @@ sudo nano nginx
 #Cambia la línea 87 a NGINXPATH=${NGINXPATH:-/etc/nginx}
 
 # Ejecuta 
-sudo service nginx start #Deberíamos tener un [ OK ].
+sudo /etc/init.d/nginx start
+sudo fuser -k 80/tcp
+sudo fuser -k 443/tcp
+sudo systemctl status nginx
