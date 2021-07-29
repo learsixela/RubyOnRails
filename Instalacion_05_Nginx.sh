@@ -9,9 +9,10 @@ cd /etc/init.d
 #Ejecuta
 sudo nano nginx
 ## control+o y enter para guardar y ctrl+x para salir
+#cambiaremos /usr/local por /etc
 #Cambia la línea 21 /usr/local/nginx/conf/nginx.conf  a  /etc/nginx/conf/nginx.conf
 #Cambia la línea 22 /usr/local/nginx/logs/nginx.pid   a  /etc/nginx/logs/nginx.pid
-#Cambia la línea 87 a NGINXPATH=${NGINXPATH:-/etc/nginx}
+#Cambia la línea NGINXPATH=${NGINXPATH:-/usr/local/nginx} a NGINXPATH=${NGINXPATH:-/etc/nginx}
 
 # Ejecuta 
 sudo /etc/init.d/nginx start

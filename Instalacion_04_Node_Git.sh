@@ -6,6 +6,8 @@ sudo mkdir www
 cd www
 #Clonamos el repositorio
 sudo git clone https://github.com/learsixela/sistemabase.git
+#la ruta final sera /var/www donde se clonara cualquier proyecto
+
 #Cambiar el propietario del proyecto 
 sudo chown -R ubuntu sistemabase/
 #Ingresar al directorio
