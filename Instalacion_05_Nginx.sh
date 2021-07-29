@@ -9,8 +9,8 @@ cd /etc/init.d
 #Ejecuta
 sudo nano nginx
 ## control+o y enter para guardar y ctrl+x para salir
-#Cambia la línea 21 a /etc/nginx/conf/nginx.conf
-#Cambia la línea 22 a /etc/nginx/logs/nginx.pid
+#Cambia la línea 21 /usr/local/nginx/conf/nginx.conf  a  /etc/nginx/conf/nginx.conf
+#Cambia la línea 22 /usr/local/nginx/logs/nginx.pid   a  /etc/nginx/logs/nginx.pid
 #Cambia la línea 87 a NGINXPATH=${NGINXPATH:-/etc/nginx}
 
 # Ejecuta 
@@ -41,7 +41,7 @@ sudo touch rails.conf
 #editar archivo
 sudo nano rails.conf
 
-#pegar el contenido con SU IP PUBLICA DE AWS <public_ip_address>
+#copiar y pegar el contenido con SU IP PUBLICA DE AWS <public_ip_address>
 
 server {
         listen 80; 
@@ -59,3 +59,6 @@ sudo systemctl restart nginx
 #validamos el estado
 sudo systemctl status nginx
 #control+c y enter para salir
+
+#probar su ip publica en el browser
+http://3.19.143.178/
